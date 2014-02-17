@@ -31,16 +31,20 @@ do {
 	// If remainder is greater than 4, divide by 4, get remainder - store small pizaa # and remainder
 
 	if ($totalSlices >= 8) {
+		$numofLarges = 0;
 		$numofLarges = intval($totalSlices / 8);
 		$totalSlices %= 8;
 	}
 
 	if ($totalSlices >= 6) {
+		$numOfMediums = 0;
 		$numOfMediums = intval($totalSlices / 6);
 		$totalSlices %= 6;
 	}
 
 	if ($totalSlices >= 4) {
+		$numOfSmalls = 0;
+		$extraSlices = 0;
 		$numOfSmalls = intval($totalSlices / 4);
 		$extraSlices %= 4;
 	}
