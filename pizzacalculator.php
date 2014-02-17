@@ -30,21 +30,22 @@ do {
 	// If remainder is greater than 6, divide by 6, get remainder - store med pizza # and remainder
 	// If remainder is greater than 4, divide by 4, get remainder - store small pizaa # and remainder
 
+	$numofLarges = 0;
+	$numOfMediums = 0;
+	$numOfSmalls = 0;
+	$extraSlices = 0;
+
 	if ($totalSlices >= 8) {
-		$numofLarges = 0;
 		$numofLarges = intval($totalSlices / 8);
 		$totalSlices %= 8;
 	}
 
 	if ($totalSlices >= 6) {
-		$numOfMediums = 0;
 		$numOfMediums = intval($totalSlices / 6);
 		$totalSlices %= 6;
 	}
 
 	if ($totalSlices >= 4) {
-		$numOfSmalls = 0;
-		$extraSlices = 0;
 		$numOfSmalls = intval($totalSlices / 4);
 		$extraSlices %= 4;
 	}
