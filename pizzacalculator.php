@@ -11,7 +11,7 @@ function get_input() {
 $runCalculator = TRUE;
 
 do {
-	// Input from user
+	// Get and store input from user
 	echo 'How many guests eat only 1 slice of pizza: ' . PHP_EOL;
 	$oneSlice = get_input();
 
@@ -26,9 +26,8 @@ do {
 
 	$totalSlices = $oneSlice + ($twoSlices * 2) + ($threeSlices * 3) + ($fourSlices * 4);
 
-	// If greater than 8, divide by 8 and get remainder - store large pizza # and remainder
-	// If remainder is greater than 6, divide by 6, get remainder - store med pizza # and remainder
-	// If remainder is greater than 4, divide by 4, get remainder - store small pizaa # and remainder
+	// Divide total slices by # of slices in each size pizza
+	// Store number of each pizza size and remainder slices
 
 	$numofLarges = 0;
 	$numOfMediums = 0;
@@ -50,8 +49,10 @@ do {
 		$extraSlices %= 4;
 	}
 
+	// Output answer
 	echo "You need to order:\n $numofLarges large pizzas\n $numOfMediums medium pizzas\n $numOfSmalls small pizzas\n EXTRA SLICES: $extraSlices\n";
 
+	// Prompt to run calculator again
 	echo 'Do you want to calculate another order? Y/N: ' . PHP_EOL;
 	$runAgain = strtoupper(get_input());
 
